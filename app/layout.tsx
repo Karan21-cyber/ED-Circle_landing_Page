@@ -2,7 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "./components/navbar/nav-bar";
+import Navbar from "../components/navbar/nav-bar";
 import { useState } from "react";
 import Image from "next/image";
 
