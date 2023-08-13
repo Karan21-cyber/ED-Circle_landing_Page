@@ -1,4 +1,3 @@
-"use client"
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,6 +15,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Add other metadata here */}
+        <title>Ed-Circle</title>
+        <meta name="description" content="Developed by Karan Chaudhary" />
+      </head>
       <body className={`font-rem ${!open ? "" : "bg-gray-300"}`}>
         <Navbar open={open} setOpen={setOpen} />
 
@@ -24,9 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// Move the metadata outside of the component export
-export const metadata: Metadata = {
-  title: "Ed-Circle",
-  description: "Developed by Karan Chaudhary",
-};
