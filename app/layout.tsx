@@ -7,11 +7,6 @@ import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Ed-Circle",
-  description: "Developed by Karan Chaudhary",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -29,3 +24,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+// Move the metadata outside of the component export
+export const metadata: Metadata = {
+  title: "Ed-Circle",
+  description: "Developed by Karan Chaudhary",
+};
