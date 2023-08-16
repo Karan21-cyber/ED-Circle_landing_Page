@@ -27,7 +27,7 @@ export default function Navbar({ open, setOpen }: Type) {
               />
 
               <Image
-                src={"/sampleLogo.png"}
+                src={"/SampleLogo.png"}
                 width={167}
                 height={34}
                 className="logo hidden lg:block"
