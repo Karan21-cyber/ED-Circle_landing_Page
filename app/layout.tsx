@@ -1,8 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "../components/navbar/nav-bar";
-import { useState } from "react";
+import Provider from "@/components/provider/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +10,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
 
   return (
     <html lang="en">
@@ -21,10 +19,8 @@ export default function RootLayout({
         <title>Ed-Circle</title>
         <meta name="description" content="Developed by Karan Chaudhary" />
       </head>
-      <body className={`font-rem ${!open ? "" : "bg-gray-300"}`}>
-        <Navbar open={open} setOpen={setOpen} />
-
-        {open ? "" : children}
+      <body className={`font-rem`}>
+       <Provider>{children}</Provider>
       </body>
     </html>
   );
